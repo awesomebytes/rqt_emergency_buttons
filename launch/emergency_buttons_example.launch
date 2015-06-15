@@ -1,0 +1,4 @@
+<launch>
+	<rosparam file="$(find rqt_emergency_buttons)/config/emergency_buttons_dashboard.yaml" command="load" />
+	<node pkg="rqt_emergency_buttons" type="rqt_emergency_buttons" name="rqt_emergency_buttons" output="screen" />
+</launch>

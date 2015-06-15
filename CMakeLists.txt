@@ -8,6 +8,13 @@ install(FILES plugin.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-install(PROGRAMS scripts/rqt_emergency_buttons
+install(PROGRAMS
+  scripts/rqt_emergency_buttons
+  scripts/test_plugin.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+foreach (dir launch config)
+ install(DIRECTORY ${dir}/
+ DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+endforeach(dir)
