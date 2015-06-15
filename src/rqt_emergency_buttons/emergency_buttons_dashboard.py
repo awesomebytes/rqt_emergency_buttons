@@ -110,7 +110,7 @@ class EmergencyButtonsDashboard(Dashboard):
         for emergency_button_elem in self._emergency_buttons_list:
             for emer_name in emergency_button_elem.keys():
                 emergency_button_elem[emer_name]['emergency_widget'].set_pressed_status(emergency_button_elem[emer_name]['pressed_status'])
-                rospy.loginfo("Updated " + str(emer_name) + " with "
+                rospy.logdebug("Updated " + str(emer_name) + " with "
                               + ("pressed." if emergency_button_elem[emer_name].get('pressed_status') else "not pressed."))
 
 
